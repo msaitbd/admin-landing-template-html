@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off",
+        "button-name": "off",
+        "input-button-name": "off"
+      }
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "user-select"
+        ]
+      }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "iframe[loading]",
+          "iframe[loading]"
+        ]
+      }
+    ],
+    "axe/text-alternatives": [
+      "default",
+      {
+        "frame-title": "off"
+      }
+    ]
+  }
+}

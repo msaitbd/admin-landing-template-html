@@ -1,0 +1,81 @@
+.btn-primary {
+  color: $white;
+  border-color: $primary-color;
+  background-color: $primary-color !important;
+  transition: 0.3s;
+  padding: 8px 20px;
+  border: 1px solid $white;
+  font-weight: bold;
+  height: 40px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    color: $white;
+    border-color: $primary-color;
+    background-color: #14103d !important;
+    transition: 0.3s;
+    border: 1px solid $white;
+
+  }
+
+  &:focus {
+    color: $white;
+    border-color: $primary-color;
+    background-color: #14103d !important;
+    border: 1px solid;
+
+  }
+}
+
+
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid $white;
+  font-weight: 500;
+  font-size: 18px;
+
+  &:hover {
+    background-color: transparent;
+    color: $white;
+    font-weight: 500;
+    border: 1px solid $white;
+  }
+}
+
+.btn:active {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: #fff !important;
+}
+
+.btn-light {
+  background-color: $white !important;
+  border-color: $primary-color !important;
+  padding: 5px 30px !important;
+  color: $primary-color;
+  font-weight: bold;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid;
+
+  &:hover {
+    background-color: #73709bb4 !important;
+    color: $white;
+  }
+}
+
+.btn-outline-light {
+  padding: 5px 30px !important;
+  height: 40px;
+  display: inline-flex;
+  color: $white;
+  font-weight: bold;
+  align-items: center;
+  font-size: 16px;
+}

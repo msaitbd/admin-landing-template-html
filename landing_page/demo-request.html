@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSA Landing Page</title>
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="py-3" id="mainHeader">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"><img src="assets/img/logo.png" alt=""></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="iconify" data-icon="fe:bar" data-width="40" data-height="40"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class="nav-link active">হোম</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">ফিচার</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">প্যাকেজ এবং প্রাইস</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">টেমপ্লেটস</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">প্লাগিন</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">আমাদের সম্পর্কে</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                আরো <span class="iconify" data-icon="solar:alt-arrow-down-line-duotone" data-inline="false"></span>
+              </a>
+              <ul class="dropdown-menu px-3" aria-labelledby="navbarDropdown">
+
+                <li><a class="dropdown-item" href="#">আরো 1</a></li>
+                <li><a class="dropdown-item" href="#">আরো 2</a></li>
+                <li><a class="dropdown-item" href="#">আরো 3</a></li>
+                <li><a class="dropdown-item" href="#">আরো 4</a></li>
+
+              </ul>
+            </li>
+
+          </ul>
+          <form class="d-flex align-items-center">
+
+            <a href="demo-request.html" class="btn btn-primary rounded-pill">ডেমো অনুরোধ</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- header end -->
+
+
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+          <div class="breadcrumbs__content text-center py-lg-5">
+            <h2 class="breadcrumbs__title">ডেমো রিকুয়েস্ট</h2>
+            <p class="breadcrumbs__text">
+              Fill out the form below. An expert would contact you soon to
+              present the demo to you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container py-5">
+    <form class="custom-form">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="fullName" class="form-label">Full name *</label>
+          <input type="text" class="form-control" id="fullName" placeholder="ex: Jhon Doe" required>
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email Address *</label>
+          <input type="email" class="form-control" id="email" placeholder="ex: yourmail@mail.com" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="instituteName" class="form-label">Institute Name *</label>
+          <input type="text" class="form-control" id="instituteName" placeholder="Institute name here" required>
+        </div>
+        <div class="col-md-6">
+          <label for="website" class="form-label">Institute Website</label>
+          <input type="url" class="form-control" id="website" placeholder="https:// (Optional)">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="phone" class="form-label">Phone Number *</label>
+          <input type="text" class="form-control" id="phone" placeholder="0123*******" required>
+        </div>
+        <div class="col-md-6">
+          <label for="address" class="form-label">Institute Address *</label>
+          <input type="text" class="form-control" id="address" placeholder="Institute Address here" required>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="studentsNumber" class="form-label">Avg. Students Number</label>
+          <input type="text" class="form-control" id="studentsNumber" placeholder="100-500">
+        </div>
+        <div class="col-md-6">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="terms">
+            <label class="form-check-label" for="terms">
+              I have read and agree to the <a href="#">Terms & Condition</a> and <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-3">Send message</button>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+
+  <!-- footer -->
+  <footer class="footer text-light py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Description -->
+        <div class="col-md-4 mb-4">
+          <div class="footer-logo mb-4">
+            <img class="w-50" src="assets/img/footer-logo.png" alt="">
+          </div>
+          <p>
+            MSA, এমন একটি সফ্টওয়্যার যা একাডেমী বা শিক্ষা প্রতিষ্ঠানগুলোকে তাদের শিক্ষক, শিক্ষার্থী এবং প্রতিষ্ঠান
+            পরিচালনা করতে সাহায্য করে। সর্বত্র শিক্ষার্থী ও স্কুলগুলোর চাহিদা পূরণ করার জন্য আমাদের কাছে বিস্তৃত পণ্য
+            এবং
+            পরিষেবা রয়েছে। ভর্তি কার্যক্রম থাকে শুরু করে শিক্ষার্থীদের উপস্থিতি নেয়া, ট্র্যাক রাখা, ক্লাস পরিচালনা করা,
+            বাড়ির কাজ, পরীক্ষা পরিচালনা সহ প্রাতিষ্ঠানিক কার্যক্রম পরিচালনার সকল দিক, শিক্ষক ও কর্মচারীদের পর্যবেক্ষণ
+            এবং
+            রিপোর্ট তৈরী সহ আরও অনেক কিছু করা যায়।
+          </p>
+          <p class="py-3">শিক্ষা প্রতিষ্ঠানগুলিকে তাদের কর্মকান্ড ডিজিটাল এবং আরও কার্যকরভাবে চালাতে প্রতিনিয়ত সাহায্য
+            করছি, MSA
+            সাশ্রয়ী মূল্যে ও নির্ভরযোগ্য শিক্ষা ব্যবস্থাপনার একটি সহজ সমাধান।</p>
+          <p>আমাদের ট্রেড লাইসেন্স নম্বর হল: ০৫-৫৬১৭৫</p>
+        </div>
+        <!-- Quick Links -->
+        <div class="col-md-2 col-6 mb-4">
+          <h5 class="mb-4">কুইক লিঙ্ক</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light">MSA সম্পর্কে</a></li>
+            <li><a href="#" class="text-light">নোটিশ</a></li>
+            <li><a href="#" class="text-light">ক্লাব / ক্লাস রুটিন</a></li>
+          </ul>
+        </div>
+        <!-- Institution -->
+        <div class="col-md-2 col-6 mb-4">
+          <h5 class="mb-4">প্রতিষ্ঠান</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light">কোম্পানি সম্পর্কে</a></li>
+            <li><a href="#" class="text-light">পথ</a></li>
+            <li><a href="#" class="text-light">যোগাযোগ করুন</a></li>
+            <li><a href="#" class="text-light">পার্টনার্স</a></li>
+            <li><a href="#" class="text-light">Privacy Policy</a></li>
+            <li><a href="#" class="text-light">Terms and Conditions</a></li>
+            <li><a href="#" class="text-light">Refund Policy</a></li>
+          </ul>
+        </div>
+        <!-- Contact Information -->
+        <div class="col-md-4">
+          <h5 class="mb-4">আমাদের সাথে যোগাযোগ করুন</h5>
+          <ul class="list-unstyled">
+            <li><span class="iconify" data-icon="mdi:phone"></span> +880147258369</li>
+            <li><span class="iconify" data-icon="mdi:map-marker"></span> মোখলেস প্লাজা (২য় ও ৩য় তলা), সুপার মেডিকেল
+              ছাড়াও, সাভার, ঢাকা, বাংলাদেশ</li>
+            <li><span class="iconify" data-icon="mdi:email"></span> yourmail@gmail.com</li>
+          </ul>
+          <hr>
+          <p class="pb-3">আমাদের বিশেষ অফার সুবিধাগুলো এখনোই বুঝে নিন। আপনার শিক্ষা পরিচালনায় পাশে আছি আমরা।</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+              aria-describedby="basic-addon2">
+            <span class="input-group-text" id="basic-addon2"> <img class="iconify" src="assets/img/send.png"
+                alt=""></span>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <section class="footer-bottom py-3">
+    <div class="container ">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-lg-0 mb-3">
+          <span class="me-2 title">Follow Us:</span>
+          <a href="#" class="me-2">
+            <span class="iconify" data-icon="ri:facebook-fill" data-width="24" data-height="24"></span>
+          </a>
+          <a href="#">
+            <span class="iconify" data-icon="streamline:whatsapp-solid" data-width="24" data-height="24"></span>
+          </a>
+          <p class="copy-right"> Copyright &copy; MSA School 2024 .All Right Reserved</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="me-2">
+            <img src="assets/img/google-pay.png" alt="Google Play" class="img-fluid">
+          </a>
+          <a href="#">
+            <img src="assets/img/app-store.png" alt="App Store" class="img-fluid">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 50) {
+        header.style.backgroundColor = '#092F78';
+      } else {
+        header.style.backgroundColor = 'transparent';
+      }
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $('.counter').each(function () {
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 4000,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+    $("#most-viewd-items").owlCarousel({
+      loop: true,
+      autoplay: true,
+      nav: true,
+      dots: false,
+      navText: [
+        '<span class="iconify" data-icon="bi:arrow-left-short" data-width="24" data-height="24"></span>',
+        '<span class="iconify" data-icon="bi:arrow-right-short" data-width="24" data-height="24"></span>',
+      ],
+      responsive: {
+        0: {
+          items: 1,
+          margin: 10,
+        },
+        600: {
+          items: 2,
+          margin: 15,
+        },
+        1000: {
+          items: 4,
+          margin: 20,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

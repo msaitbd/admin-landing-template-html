@@ -1,0 +1,2 @@
+demo page nav 
+its working now i want whn less than 50 words i want there will be no btn

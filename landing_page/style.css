@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+
+.hero {
+  background: rgba(0, 0, 0, 0) url(assets/img/banner.png) no-repeat center
+    center / cover;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-choose-us {
+  background: rgba(0, 0, 0, 70%) url(assets/img/why-choose-us.png) repeat scroll
+    0 0 / cover;
+  min-height: 70vh;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.why-choose-us::after {
+  background: rgb(0, 0, 0) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: auto auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*  */
+
+.our-partner {
+  background: url(assets/img/partner-bg.png) no-repeat bottom center / cover;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-position: top;
+  height: 664px;
+  display: flex;
+  align-items: center;
+}
+
+/* counter */
+
+.our-status {
+  background: rgba(0, 0, 0, 70%) url(assets/img/counter-banner.png) repeat
+    scroll 0 0 / cover;
+
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.our-status::after {
+  background: rgb(0, 0, 0) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: auto auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.team-slider .card {
+  background-image: url("assets/img/card-bg.png");
+}
+.read-less {
+  display: none;
+}
+
+@media (min-width: 992px) and (max-width: 1400px) {
+  .hero {
+    height: 120vh;
+  }
+}
