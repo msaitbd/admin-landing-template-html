@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Dashboard</title>
+	<!-- FontAwesome CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+
+	<style>
+		.card {
+			position: relative;
+			background: transparent;
+		}
+
+		.card .bg-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: fill;
+			z-index: -10;
+		}
+
+		.card.type-1 {
+			width: 192px;
+			height: 340px;
+			min-width: 192px;
+			max-width: 192px;
+			font-size: 10px;
+		}
+
+		.card.type-2 {
+			height: 192px;
+			width: 320px;
+			font-size: 10px;
+		}
+
+		.card.type-1 h5 {
+			font-size: 12px;
+		}
+
+		.card .sign1 {
+			border-bottom: 1px solid #000;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.card .fas {
+			font-size: 10px;
+		}
+
+		.card .frame {
+			width: 60px;
+			height: 60px;
+			overflow: hidden;
+			border-radius: 4px;
+		}
+
+		.cards-wrapper {
+			flex-wrap: wrap;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="dashboard">
+		<div class="dashboard-nav">
+			<div class="nav-wrapper">
+				<header class="sticky-top">
+					<a href="#" class="menu-toggle">
+						<i class="fas fa-close"></i>
+					</a>
+					<a href="#" class="brand-logo">
+						<img src="img/logo.png" alt="" />
+						<span>MSA School</span>
+					</a>
+				</header>
+
+				<!-- side bar -->
+				<nav class="dashboard-nav-list">
+					<div class="w-100 px-2 mb-4">
+						<div class="input-group search-input rounded-0 shadow-sm">
+							<span class="input-group-text rounded-0"><i class="fas fa-search"></i></span>
+							<input type="text" class="form-control" placeholder="Search Menu" aria-label="Search Menu" />
+							<span class="input-group-text rounded-0"><i class="fa-solid fa-caret-right"></i></span>
+						</div>
+					</div>
+
+					<div class="px-2">
+						<p class="mb-1 mt-3 section-title">General</p>
+						<a href="#" class="dashboard-nav-item active">
+							<div class="d-flex align-items-center">
+								<img src="img/menu1.png" alt="" /> Dashboard
+							</div>
+						</a>
+
+						<p class="my-2 section-title">Admission</p>
+						<div class="dashboard-nav-dropdown show active mb-2">
+							<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle text-light">
+								<img src="img/menu2.png" alt="" />Manage Admission
+								<i class="fa-solid fa-caret-right dropdown-icon"></i>
+							</a>
+							<div class="dashboard-nav-dropdown-menu">
+								<a href="admit.html" class="dropdpwn-subitem text-light"><i class="fa-solid fa-hand-point-right"></i>
+									Admit
+									Student</a>
+								<a href="all-cards.html" class="dropdpwn-subitem active-item"><i
+										class="fa-solid fa-hand-point-right"></i>
+									All ID Card</a>
+							</div>
+						</div>
+						<p class="my-2 admission-title d-flex align-items-center justify-content-center gx-2">
+							<img src="img/admission.png" alt="" /> Admission
+						</p>
+						<div class="card border-0">
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu3.png" alt="" /> Online Admission
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"><i class="fa-solid fa-hand-point-right"></i> Admit
+										Student</a>
+									<a href="#" class="dropdpwn-subitem"><i class="fa-solid fa-hand-point-right"></i> Online
+										Application</a>
+								</div>
+							</div>
+						</div>
+
+						<p class="my-2 section-title">Student</p>
+						<div class="card border-0">
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/menu4.png" alt="" /> List of student
+								</div>
+							</a>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu5.png" alt="" />Manage Student
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="/admit.html" class="dropdpwn-subitem">
+										Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu6.png" alt="" />Reports
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem">Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+						</div>
+
+						<p class="my-2 section-title">Student Attendance</p>
+						<div class="card border-0">
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu7.png" alt="" /> Manage Attendance
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"> Admit Student</a>
+									<a href="#" class="dropdpwn-subitem"> Online Application</a>
+								</div>
+							</div>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu6.png" alt="" />Reports
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"> Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- fees -->
+						<p class="my-2 section-title">Fees</p>
+						<div class="card border-0">
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fees1.png" alt="" /> Fees Collection
+								</div>
+							</a>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/fees2.png" alt="" /> Fees Setup
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"> Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fees3.png" alt="" /> Fine Setup
+								</div>
+							</a>
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fess4.png" alt="" /> Waiver Setup
+								</div>
+							</a>
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fees5.png" alt="" /> Manage Free Gene
+								</div>
+							</a>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu6.png" alt="" />Reports
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem">Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="nav-item-divider"></div>
+						<a href="#" class="dashboard-nav-item">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-sign-out-alt"></i> Logout
+							</div>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="dashboard-app">
+			<!-- Dashbora header section -->
+			<header class="dashboard-toolbar px-4">
+				<div class="d-flex gap-3">
+					<div class="menu-toggle d-block d-md-none">
+						<img src="img/bar.png" alt="" />
+					</div>
+					<div class="d-none d-lg-block">
+						<div class="input-group main-search">
+							<span class="input-group-text bg-transparent"
+								style="border-right: 0; border-color: #9ca3af; color: #9ca3af"><i class="fas fa-search"></i></span>
+							<input type="text" class="form-control bg-transparent" placeholder="Search here"
+								style="border-color: #9ca3af; border-left: 0; color: #fff" />
+						</div>
+					</div>
+				</div>
+
+				<div class="icon-bar">
+					<!-- search -->
+					<div class="dropdown main-nav-search">
+						<div class="dropdown-toggle icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+							class="icon"><i class="fas fa-search"></i>
+
+						</div>
+						<ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+							<li class="dropdown-item">
+								<div class="input-group main-search " style="width: 300px;">
+									<span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+									<input type="text" class="form-control bg-transparent" placeholder="Search here">
+								</div>
+
+							</li>
+						</ul>
+					</div>
+					<!-- nightmood -->
+					<div id="theme-toggler" class="icon">
+						<i class="fas fa-moon"></i>
+					</div>
+
+					<!-- email -->
+					<div class="dropdown email-dropdown">
+						<div class="dropdown-toggle icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="alert alert-primary mb-2" role="alert">
+										A simple primary alert—check it out!
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="alert alert-danger mb-2" role="alert">
+										A simple danger alert—check it out!
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="alert alert-warning m-0" role="alert">
+										A simple danger alert—check it out!
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- notification -->
+					<div class="dropdown">
+						<div class="dropdown-toggle icon position-relative" type="button" id="dropdownMenuButton1"
+							data-bs-toggle="dropdown">
+							<i class="fas fa-bell"></i>
+							<span style="
+										width: 8px;
+										height: 8px;
+										border-radius: 50%;
+										background: #ea3546;
+										position: absolute;
+										top: 6px;
+										right: 6px;
+									"></span>
+						</div>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<li class="pb-2 border-bottom">
+								<a class="dropdown-item" href="#">
+									<div class="d-flex gap-4 align-items-center">
+										<img src="img/profile.png" alt="" class="rounded-circle" />
+										<p>
+											<strong>John Doe</strong> reacted to your post10 mins
+											ago
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="pb-2 border-bottom">
+								<a class="dropdown-item" href="#">
+									<div class="d-flex gap-4 align-items-center">
+										<img src="img/profile.png" alt="" class="rounded-circle" />
+										<p>
+											<strong>John Doe</strong> reacted to your post10 mins
+											ago
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="d-flex gap-4 align-items-center">
+										<img src="img/profile.png" alt="" class="rounded-circle" />
+										<p>
+											<strong>John Doe</strong> reacted to your post10 mins
+											ago
+										</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- settings -->
+					<div class="dropdown">
+						<div class="dropdown-toggle icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+							<i class="fas fa-cog"></i>
+						</div>
+						<ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="dropdownMenuButton1">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- profile -->
+					<div class="dropdown">
+						<div class="dropdown-toggle profile-icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+							<img src="img/profile.png" alt="Profile" />
+						</div>
+						<ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+							<li><a class="dropdown-item" href="#">My Profile</a></li>
+							<li><a class="dropdown-item" href="#">Login</a></li>
+							<li>
+								<a class="dropdown-item" href="#">Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+
+			<main class="p-4">
+
+
+				<div class="container-fluid pb-5">
+					<h5 class="fw-bold text-theme mb-5">All Cards</h5>
+					<div class="card">
+						<style>
+
+
+						</style>
+						<div class="all-card-tab">
+							<ul class="nav nav-pills progress-tab " id="pills-tab" role="tablist">
+								<!-- 	Student Cards -->
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="pills-student-info-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-student-info" type="button" role="tab" aria-controls="pills-student-info"
+										aria-selected="true">
+										Student Cards
+									</button>
+								</li>
+								<!-- 	Employee Cards -->
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-admission-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-admission" type="button" role="tab" aria-controls="pills-admission"
+										aria-selected="false">
+										Employee Cards
+									</button>
+								</li>
+								<!-- 	Guardian Cards -->
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-address-tab" data-bs-toggle="pill" data-bs-target="#pills-address"
+										type="button" role="tab" aria-controls="pills-address" aria-selected="false">
+										Guardian Cards
+									</button>
+								</li>
+								<!-- 	Admit Card -->
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-guardian-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-guardian" type="button" role="tab" aria-controls="pills-guardian"
+										aria-selected="false">
+										Admit Card
+									</button>
+								</li>
+								<!-- Testimonials -->
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-health-tab" data-bs-toggle="pill" data-bs-target="#pills-health"
+										type="button" role="tab" aria-controls="pills-health" aria-selected="false">
+										Testimonials
+									</button>
+								</li>
+								<!-- 	Seat Plan -->
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="pills-prev-school-tab" data-bs-toggle="pill"
+										data-bs-target="#pills-prev-school" type="button" role="tab" aria-controls="pills-prev-school"
+										aria-selected="false">
+										Seat Plan
+									</button>
+								</li>
+							</ul>
+						</div>
+
+						<div class="card-body all-school-management-card">
+							<div class="tab-content progress-tab-input" id="pills-tabContent" style="min-height: 70vh">
+								<!-- student Cards -->
+								<div class="tab-pane fade show active" id="pills-student-info" role="tabpanel"
+									aria-labelledby="pills-student-info-tab" tabindex="0">
+									<div class="">
+										<div class="row">
+											<!-- card-1.1 -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1">
+													<img src="./assets/images/cards/card-1.1-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<h5 class="text-uppercase text-light py-3">
+															Msa it school
+														</h5>
+														<p class="text-center pt-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit.
+															Praesentium autem sed!
+														</p>
+														<img src="./assets/images/cards/qrcode.png" alt="qr code" class="qr-code mb-2" />
+														<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+														<p class="mb-4">Authority sincerely</p>
+														<div class="mb-5">
+															<div class="d-flex gap-2 align-items-center">
+																<i class="fas fa-phone"></i>
+																+8801521458253
+															</div>
+															<div class="d-flex gap-2 align-items-center">
+																<i class="fas fa-envelope"></i>
+																bangladesh@two.o
+															</div>
+															<div class="d-flex gap-2 align-items-center">
+																<i class="fas fa-location-dot"></i>
+																Dhaka, Savar, Bangladesh
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 1.2 -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1">
+													<img src="./assets/images/cards/card-2.1-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<div class="row">
+															<div class="col-4">
+																<img src="./assets/images/cards/logo-1.png" alt="" class="img-fluid mt-2" />
+															</div>
+															<div class="col-8 text-light mb-1">
+																<h5 class="text-uppercase text-light py-2 mb-0">
+																	Msa it school
+																</h5>
+																<p class="mb-0">Dhaka, Savar</p>
+																<small class="">EIIN: 112233</small>
+															</div>
+														</div>
+														<div style="background: #034883; height: 40px; width: 192px;"></div>
+
+														<div class="frame" style="
+												border: 2px solid #42c3f0;
+												rotate: 45deg;
+												position: absolute;
+												top: 75px;
+												left: 33%;
+											">
+															<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+																style="rotate: -45deg; scale: 2" />
+														</div>
+
+														<h5 class="mt-5" style="font-size: 16px">Md. Sajib Mia</h5>
+
+														<div class="mb-5">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Father Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Mother Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>ID No</td>
+																		<td>: 112233</td>
+																	</tr>
+
+																	<tr>
+																		<td>Section</td>
+																		<td>: 2024/2025</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 2.1 -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1">
+													<img src="./assets/images/cards/card-1.2-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<h5 class="text-uppercase text-light py-3">
+															Msa it school
+														</h5>
+														<p class="text-center pt-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit.
+															Praesentium autem sed!
+														</p>
+														<img src="./assets/images/cards/qrcode.png" alt="qr code" class="qr-code mb-2" />
+														<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+														<p class="mb-4">Authority sincerely</p>
+														<div class="mb-5">
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-phone"></i>
+																+8801521458253
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-envelope"></i>
+																bangladesh@two.o
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-location-dot"></i>
+																Dhaka, Savar, Bangladesh
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 2.2 card -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1 text-light">
+													<img src="./assets/images/cards/card-2.2-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<div class="d-flex flex-column align-items-center text-light">
+															<h5 class="text-uppercase text-light py-2 mb-0">
+																Msa it school
+															</h5>
+															<p class="mb-0">Dhaka, Savar</p>
+															<small class="">EIIN: 112233</small>
+														</div>
+														<!-- <div style="background: #034883; height: 40px; width: 190px"></div> -->
+
+														<div class="frame" style="
+												border: 2px solid #42c3f0;
+												position: absolute;
+												top: 60px;
+												left: 33%;
+												border-radius: 50%;
+											">
+															<img src="./assets/images/cards/profile.jpg" alt=""
+																class="avatar h-100 img-fluid object-fit-cover" />
+														</div>
+
+														<h5 class="mt-5 pt-4" style="font-size: 16px">
+															Md. Sajib Mia
+														</h5>
+
+														<div class="mb-5">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Father Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Mother Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>ID No</td>
+																		<td>: 112233</td>
+																	</tr>
+
+																	<tr>
+																		<td>Section</td>
+																		<td>: 2024/2025</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- 3.1 card -->
+											<div class="col-md-3 mb-3">
+												<div class="card text-dark type-1" style="background: #f39de5">
+													<img src="./assets/images/cards/card-1.3-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<h5 class="text-uppercase py-3">Msa it school</h5>
+														<p class="text-center pt-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit.
+															Praesentium autem sed!
+														</p>
+														<img src="./assets/images/cards/qrcode.png" alt="qr code" class="qr-code mb-2" />
+														<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+														<p class="mb-4">Authority sincerely</p>
+														<div class="mb-5">
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-phone"></i>
+																+8801521458253
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-envelope"></i>
+																bangladesh@two.o
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-location-dot"></i>
+																Dhaka, Savar, Bangladesh
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 3.2 -->
+											<div class="col-md-3 mb-3">
+												<div class="card text-light type-1">
+													<img src="./assets/images/cards/card-2.5-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<div class="mt-3">
+															<h5 class="text-uppercase text-centerpy-2 mb-0">
+																Msa it school
+															</h5>
+															<p class="mb-0 text-center">Dhaka, Savar</p>
+															<p class="text-center">
+																<small class="">EIIN: 112233</small>
+															</p>
+														</div>
+
+														<div class="frame" style="position: absolute; top: 80px; left: 33%">
+															<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+																style="scale: 2" />
+														</div>
+														<h5 class="mt-5 pt-5" style="font-size: 15px">
+															Md. Sajib Mia
+														</h5>
+
+														<div class="mt-2 mb-2">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Father Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Mother Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>ID No</td>
+																		<td>: 112233</td>
+																	</tr>
+
+																	<tr>
+																		<td>Section</td>
+																		<td>: 2024/2025</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 4.1 -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1">
+													<img src="./assets/images/cards/card-1.3-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<h5 class="text-uppercase text-light py-3">
+															Msa it school
+														</h5>
+														<p class="text-center pt-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit.
+															Praesentium autem sed!
+														</p>
+														<img src="./assets/images/cards/qrcode.png" alt="qr code" class="qr-code mb-2" />
+														<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+														<p class="mb-4">Authority sincerely</p>
+														<div class="mb-5">
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-phone"></i>
+																+8801521458253
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-envelope"></i>
+																bangladesh@two.o
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-location-dot"></i>
+																Dhaka, Savar, Bangladesh
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 4.2 -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1">
+													<img src="./assets/images/cards/card-2.3-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<div class="row">
+															<div class="col-4">
+																<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid mt-2" />
+															</div>
+															<div class="col-8 text-light mb-1">
+																<h5 class="text-uppercase text-end text-light py-2 mb-0">
+																	Msa it school
+																</h5>
+																<p class="mb-0 text-end">Dhaka, Savar</p>
+																<p class="text-end">
+																	<small class="">EIIN: 112233</small>
+																</p>
+															</div>
+														</div>
+														<!-- <div style="background: #034883; height: 40px; width: 190px"></div> -->
+
+														<div class="frame" style="
+												border: 2px solid #42c3f0;
+
+												position: absolute;
+												top: 75px;
+												left: 33%;
+											">
+															<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+																style="scale: 2" />
+														</div>
+
+														<h5 class="mt-5 pt-4" style="font-size: 16px">
+															Md. Sajib Mia
+														</h5>
+
+														<div class="mb-5">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Father Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Mother Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>ID No</td>
+																		<td>: 112233</td>
+																	</tr>
+
+																	<tr>
+																		<td>Section</td>
+																		<td>: 2024/2025</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 5.1 -->
+											<div class="col-md-3 mb-3">
+												<div class="card text-light type-1" style="background: #f39de5">
+													<img src="./assets/images/cards/card-1.3-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<h5 class="text-uppercase py-3">Msa it school</h5>
+														<p class="text-center pt-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit.
+															Praesentium autem sed!
+														</p>
+														<img src="./assets/images/cards/qrcode-light.png" alt="qr code" class="qr-code mb-2" />
+														<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+														<p class="mb-4">Authority sincerely</p>
+														<div class="mb-5">
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-phone"></i>
+																+8801521458253
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-envelope"></i>
+																bangladesh@two.o
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-location-dot"></i>
+																Dhaka, Savar, Bangladesh
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 5.2 -->
+											<div class="col-md-3 mb-3">
+												<div class="card text-light type-1">
+													<img src="./assets/images/cards/card-2.6-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<div class="row">
+															<div class="col-4">
+																<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid mt-2" />
+															</div>
+															<div class="col-8 mb-1 text-dark">
+																<h5 class="text-uppercase text-end py-2 mb-0">
+																	Msa it school
+																</h5>
+																<p class="mb-0 text-end">Dhaka, Savar</p>
+																<p class="text-end">
+																	<small class="">EIIN: 112233</small>
+																</p>
+															</div>
+														</div>
+														<!-- <div style="background: #034883; height: 40px; width: 190px"></div> -->
+
+														<div class="frame" style="
+												border-radius: 50%;
+												position: absolute;
+												top: 80px;
+												left: 33%;
+											">
+															<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+																style="scale: 2" />
+														</div>
+
+														<h5 class="mt-5 pt-5" style="font-size: 16px">
+															Md. Sajib Mia
+														</h5>
+
+														<div class="mb-3">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Father Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Mother Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>ID No</td>
+																		<td>: 112233</td>
+																	</tr>
+
+																	<tr>
+																		<td>Section</td>
+																		<td>: 2024/2025</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- card 6.1 -->
+											<div class="col-md-3 mb-3">
+												<div class="card bg-light type-1">
+													<img src="./assets/images/cards/card-1.3-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<h5 class="text-uppercase py-3">Msa it school</h5>
+														<p class="text-center pt-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit.
+															Praesentium autem sed!
+														</p>
+														<img src="./assets/images/cards/qrcode.png" alt="qr code" class="qr-code mb-2" />
+														<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+														<p class="mb-4">Authority sincerely</p>
+														<div class="mb-5">
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-phone"></i>
+																+8801521458253
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-envelope"></i>
+																bangladesh@two.o
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-location-dot"></i>
+																Dhaka, Savar, Bangladesh
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 6.2 -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1">
+													<img src="./assets/images/cards/card-2.4-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<div class="row">
+															<div class="col-8 mb-1">
+																<h5 class="text-uppercase py-2 mb-0">Msa it school</h5>
+																<p class="mb-0">Dhaka, Savar</p>
+																<p class=""><small class="">EIIN: 112233</small></p>
+															</div>
+															<div class="col-4">
+																<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid mt-2" />
+															</div>
+														</div>
+														<!-- <div style="background: #034883; height: 40px; width: 190px"></div> -->
+
+														<div class="d-flex gap-1">
+															<h5 class="py-3" style="font-size: 15px">
+																Md. Sajib Mia
+															</h5>
+															<div class="frame" style="border: 2px solid #42c3f0">
+																<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+																	style="scale: 2" />
+															</div>
+														</div>
+
+														<div class="mb-5 mt-1">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Father Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Mother Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>ID No</td>
+																		<td>: 112233</td>
+																	</tr>
+
+																	<tr>
+																		<td>Section</td>
+																		<td>: 2024/2025</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 7.1 -->
+											<div class="col-md-3 mb-3">
+												<div class="card text-light type-1" style="background: #e60c8d">
+													<img src="./assets/images/cards/card-1.3-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<h5 class="text-uppercase py-3">Msa it school</h5>
+														<p class="text-center pt-2">
+															Lorem ipsum dolor sit amet consectetur adipisicing elit.
+															Praesentium autem sed!
+														</p>
+														<img src="./assets/images/cards/qrcode-light.png" alt="qr code" class="qr-code mb-2" />
+														<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+														<p class="mb-4">Authority sincerely</p>
+														<div class="mb-5">
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-phone"></i>
+																+8801521458253
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-envelope"></i>
+																bangladesh@two.o
+															</div>
+															<div class="d-flex gap-2 align-items-center justify-content-center">
+																<i class="fas fa-location-dot"></i>
+																Dhaka, Savar, Bangladesh
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- card 7.2 -->
+											<div class="col-md-3 mb-3">
+												<div class="card type-1">
+													<img src="./assets/images/cards/card-2.7-bg.png" alt="" class="bg-img" />
+													<div class="d-flex flex-column align-items-center px-3">
+														<div class="row">
+															<div class="col-8 text-light mb-1">
+																<h5 class="text-uppercase py-2 mb-0">Msa it school</h5>
+																<p class="mb-0">Dhaka, Savar</p>
+																<p class=""><small class="">EIIN: 112233</small></p>
+															</div>
+															<div class="col-4">
+																<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid mt-2" />
+															</div>
+														</div>
+														<!-- <div style="background: #034883; height: 40px; width: 190px"></div> -->
+
+														<div class="d-flex gap-1">
+															<h5 class="py-3 mt-3" style="font-size: 15px; rotate: -26deg; color: #e60c8d">
+																Md. Sajib Mia
+															</h5>
+															<div class="frame" style="margin-top: -9px; height: 53px">
+																<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+																	style="scale: 2" />
+															</div>
+														</div>
+
+														<div class="mt-4">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Father Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Mother Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>ID No</td>
+																		<td>: 112233</td>
+																	</tr>
+
+																	<tr>
+																		<td>Section</td>
+																		<td>: 2024/2025</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- Employee Cards -->
+								<div class="tab-pane fade" id="pills-admission" role="tabpanel" aria-labelledby="pills-admission-tab"
+									tabindex="0">
+
+									<div class="row">
+										<!-- crd 1.1 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-dark bg-light type-1">
+												<div class="d-flex flex-column align-items-center px-3">
+													<p class="mb-0 mt-3">If Found This Card, Rerurn to</p>
+													<h5 class="text-uppercase text-center mb-3">
+														Msa it school
+													</h5>
+													<div class="frame" style="border: 2px solid #fff">
+														<img src="./assets/images/cards/qrcode.png" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2" style="font-size: 16px">Address</h5>
+
+													<p class="">Dhaka, Savar, Bangladesh</p>
+													<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+													<p class="mb-2">Authority sincerely</p>
+													<div class="mb-5">
+														<div class="d-flex gap-2 align-items-center justify-content-center">
+															<i class="fas fa-phone"></i>
+															+8801521458253
+														</div>
+														<div class="d-flex gap-2 align-items-center">
+															<i class="fas fa-envelope"></i>
+															bangladesh@two.o
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- card 1.2 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-light type-1">
+												<img src="./assets/images/cards/card-3.1-bg.jpeg" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3">
+													<div class="col-8 text-light mb-1">
+														<h5 class="text-uppercase text-center text-light py-3 mb-0">
+															Msa it school
+														</h5>
+														<p class="mb-0 text-center">Dhaka, Savar</p>
+														<p class="text-center">
+															<small class="">EIIN: 112233</small>
+														</p>
+													</div>
+
+													<div class="frame" style="border: 2px solid #fff">
+														<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2 mb-0" style="font-size: 16px">
+														Md. Sajib Mia
+													</h5>
+													<p class="small mb-3">Teacher</p>
+
+													<div class="mb-5">
+														<table class="">
+															<tbody>
+																<tr>
+																	<td>Phone</td>
+																	<td>: +8801521458253</td>
+																</tr>
+																<tr>
+																	<td>I'd No</td>
+																	<td>: 112233</td>
+																</tr>
+																<tr>
+																	<td>Blood</td>
+																	<td>: O+</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<!-- card 2.1 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-dark type-1">
+												<img src="./assets/images/cards/card-4.2-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3">
+													<p class="mb-0 mt-3 text-light">
+														If Found This Card, Rerurn to
+													</p>
+													<h5 class="text-uppercase text-light text-center mb-3">
+														Msa it school
+													</h5>
+													<div class="frame mt-4">
+														<img src="./assets/images/cards/qrcode.png" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2" style="font-size: 16px">Address</h5>
+
+													<p class="">Dhaka, Savar, Bangladesh</p>
+													<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+													<p class="mb-2">Authority sincerely</p>
+													<div class="mb-5">
+														<div class="d-flex gap-2 align-items-center justify-content-center">
+															<i class="fas fa-phone"></i>
+															+8801521458253
+														</div>
+														<div class="d-flex gap-2 align-items-center">
+															<i class="fas fa-envelope"></i>
+															bangladesh@two.o
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- card 2.2 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-dark type-1">
+												<img src="./assets/images/cards/card-4.1-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3">
+													<div class="col-8 text-light mb-1">
+														<h5 class="text-uppercase text-center text-light py-3 mb-0">
+															Msa it school
+														</h5>
+														<p class="mb-0 text-center">Dhaka, Savar</p>
+														<p class="text-center">
+															<small class="">EIIN: 112233</small>
+														</p>
+													</div>
+
+													<div class="frame" style="border: 2px solid #fff">
+														<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2 mb-0" style="font-size: 16px">
+														Md. Sajib Mia
+													</h5>
+													<p class="small mb-3">Teacher</p>
+
+													<div class="mb-5">
+														<table class="">
+															<tbody>
+																<tr>
+																	<td>Phone</td>
+																	<td>: +8801521458253</td>
+																</tr>
+																<tr>
+																	<td>I'd No</td>
+																	<td>: 112233</td>
+																</tr>
+																<tr>
+																	<td>Blood</td>
+																	<td>: O+</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- card 3.1 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-light type-1">
+												<img src="./assets/images/cards/card-5.1-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3">
+													<div class="frame mt-3 d-flex justify-content-center align-items-center" style="
+												aspect-ratio: 1;
+												clip-path: polygon(
+													93.82% 74.09%,
+													51.05% 99.99%,
+													7.23% 75.9%,
+													6.18% 25.91%,
+													48.95% 0.01%,
+													92.77% 24.1%
+												);
+												width: 80px;
+												height: 80px;
+												background-color: #50758d;
+											">
+														<div class="" style="
+													aspect-ratio: 1;
+													clip-path: polygon(
+														93.82% 74.09%,
+														51.05% 99.99%,
+														7.23% 75.9%,
+														6.18% 25.91%,
+														48.95% 0.01%,
+														92.77% 24.1%
+													);
+													width: 72px;
+													height: 72px;
+												">
+															<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+																style="scale: 2" />
+														</div>
+													</div>
+
+													<h4 class="mt-5 mb-0" style="font-size: 16px">
+														Md. Sajib Mia
+													</h4>
+													<p class="small mb-3">Headmaster</p>
+
+													<div class="mb-4 pb-1">
+														<table class="">
+															<tbody>
+																<tr>
+																	<td>Phone</td>
+																	<td>: +8801521458253</td>
+																</tr>
+																<tr>
+																	<td>I'd No</td>
+																	<td>: 112233</td>
+																</tr>
+																<tr>
+																	<td>Blood</td>
+																	<td>: O+</td>
+																</tr>
+																<tr>
+																	<td>Joining</td>
+																	<td>: 2024</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="w-100">
+														<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid mt-2" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- card 3.2 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-dark type-1">
+												<img src="./assets/images/cards/card-5.2-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3 pt-4">
+													<div class="frame mt-5" style="border: 2px solid #fff">
+														<img src="./assets/images/cards/qrcode.png" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2" style="font-size: 16px">Address</h5>
+
+													<p class="">Dhaka, Savar, Bangladesh</p>
+													<div class="mb-3 mt-2">
+														<div class="d-flex gap-2 align-items-center justify-content-center">
+															<i class="fas fa-phone"></i>
+															+8801521458253
+														</div>
+														<div class="d-flex gap-2 align-items-center">
+															<i class="fas fa-envelope"></i>
+															bangladesh@two.o
+														</div>
+													</div>
+													<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+													<p class="mb-2">Authority sincerely</p>
+												</div>
+											</div>
+										</div>
+										<!-- card 4.1 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-light type-1">
+												<img src="./assets/images/cards/card-6.1-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3">
+													<div class="frame" style="
+												border: 2px solid #50758d;
+												border-radius: 50%;
+												width: 80px;
+												height: 80px;
+												margin-top: 21px;
+											">
+														<img src="./assets/images/cards/profile.jpg" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h4 class="mt-5 mb-0" style="font-size: 16px">
+														Md. Sajib Mia
+													</h4>
+													<p class="small mb-3">Headmaster</p>
+
+													<div class="mb-2">
+														<table class="">
+															<tbody>
+																<tr>
+																	<td>Phone</td>
+																	<td>: +8801521458253</td>
+																</tr>
+																<tr>
+																	<td>I'd No</td>
+																	<td>: 112233</td>
+																</tr>
+																<tr>
+																	<td>Blood</td>
+																	<td>: O+</td>
+																</tr>
+																<tr>
+																	<td>Joining</td>
+																	<td>: 2024</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+
+													<div class="row">
+														<div class="col-4">
+															<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid mt-2" />
+														</div>
+														<div class="col-8 mb-1 text-light">
+															<h5 class="text-uppercase mt-2 mb-0">Msa it school</h5>
+															<p class="mb-0">Dhaka, Savar</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<!-- card 4.2 -->
+										<div class="col-md-3 mb-3">
+											<div class="card text-dark type-1">
+												<img src="./assets/images/cards/card-6.2-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3 pt-4">
+													<div class="d-flex justify-content-end w-100">
+														<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid" />
+													</div>
+													<div class="frame mt-4" style="border: 2px solid #fff">
+														<img src="./assets/images/cards/qrcode.png" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2" style="font-size: 16px">Address</h5>
+
+													<p class="">Dhaka, Savar, Bangladesh</p>
+													<div class="mb-3 mt-2">
+														<div class="d-flex gap-2 align-items-center justify-content-center">
+															<i class="fas fa-phone"></i>
+															+8801521458253
+														</div>
+														<div class="d-flex gap-2 align-items-center">
+															<i class="fas fa-envelope"></i>
+															bangladesh@two.o
+														</div>
+													</div>
+													<img src="./assets/images/cards/sign.png" alt="sign" class="sign1 mb-1" />
+													<p class="mb-2">Authority sincerely</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- Gurdian Cards -->
+								<div class="tab-pane fade" id="pills-address" role="tabpanel" aria-labelledby="pills-address-tab"
+									tabindex="0">
+									<div class="d-flex mb-5 gap-4 cards-wrapper">
+										<!-- Card G.1 -->
+										<div style="background: #aceeef; z-index: -11">
+											<div class="card text-dark type-1">
+												<img src="./assets/images/cards/card-g1-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3 pt-4">
+													<div class="">
+														<img src="./assets/images/cards/logo-2.svg" alt="" class="img-fluid" />
+													</div>
+													<div class="frame mt-5">
+														<img src="./assets/images/cards/qrcode.png" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2 fw-medium" style="font-size: 18px">
+														Guardian Card
+													</h5>
+													<div class="mb-3 mt-5">
+														<div class="d-flex gap-2 align-items-center justify-content-center">
+															<h5 class="text-uppercase text-center">
+																Msa it school
+															</h5>
+														</div>
+														<div class="text-center">Dhaka, Savar</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Card G.2 -->
+										<div>
+											<div class="card text-dark type-2">
+												<img src="./assets/images/cards/card-g2-bg.png" alt="" class="bg-img" />
+												<div class="d-flex text-light flex-column align-items-center px-3 pt-3">
+													<div class="frame mt-3">
+														<img src="./assets/images/cards/qrcode-light.png" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2 fw-medium" style="font-size: 18px">
+														Guardian Card
+													</h5>
+													<div class="mb-3 mt-2">
+														<div class="d-flex gap-2 align-items-center justify-content-center">
+															<p class="text-uppercase text-center mb-0">
+																Msa it school
+															</p>
+														</div>
+														<div class="text-center">Dhaka, Savar</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Card G.3 -->
+										<div>
+											<div class="card text-dark type-2">
+												<img src="./assets/images/cards/card-g3-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3 pt-3">
+													<div class="frame mt-3">
+														<img src="./assets/images/cards/qrcode.png" alt="" class="avatar img-fluid"
+															style="scale: 2" />
+													</div>
+
+													<h5 class="mt-2 fw-medium" style="font-size: 18px">
+														Guardian Card
+													</h5>
+													<div class="mb-3 mt-2">
+														<div class="d-flex gap-2 align-items-center justify-content-center">
+															<p class="text-uppercase text-center mb-0">
+																Msa it school
+															</p>
+														</div>
+														<div class="text-center">Dhaka, Savar</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Admit Card -->
+								<div class="tab-pane fade" id="pills-guardian" role="tabpanel" aria-labelledby="pills-guardian-tab"
+									tabindex="0">
+									<div class="container student-admit-card p-4">
+										<div class="card overflow-hidden" id="admit-card">
+											<img src="./img/admit-bg.jpg" class="admit-bg" alt="" />
+											<div style="padding: 100px">
+												<div class="row">
+													<div class="text-center mt-3">
+														<h4 class="school-name mb-2">
+															B.M. JALAL UDDIN ADARSHO HIGH SCHOOL
+														</h4>
+														<p class="school-address">Savar College Road, Savar, Dhaka</p>
+													</div>
+												</div>
+												<div class="row mt-4 text-center align-items-center">
+													<div class="col-2">
+														<img src="./assets/images/cards/qrcode.png" alt="QR Code" class="img-fluid qrcode" />
+													</div>
+													<div class="col">
+														<button class="btn btn-lg btn-secondary rounded-pill">
+															ADMIT CARD
+														</button>
+													</div>
+													<div class="col-2 text-end">
+														<img src="./img/student.jpeg" alt="Student Photo" class="img-fluid avatar" />
+													</div>
+												</div>
+												<div class="row mt-4">
+													<div class="col-6">
+														<p><strong>Student Name:</strong> Md. Sajib Mia</p>
+														<p><strong>Father Name:</strong> hsajikla</p>
+														<p><strong>Mother Name:</strong> ajkhlfj</p>
+														<p>
+															<strong>Exam Name:</strong> <br />
+															Bangla, English, Math
+														</p>
+													</div>
+													<div class="col-6">
+														<p><strong>Roll Number:</strong> 1236548</p>
+														<p><strong>Registration Number:</strong> 10236547891</p>
+														<p><strong>Sections:</strong> A</p>
+													</div>
+												</div>
+												<div class="row mt-4">
+													<div class="col text-end">
+														<p class="signature">Principal signature</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Testimonials-->
+								<div class="tab-pane fade" id="pills-health" role="tabpanel" aria-labelledby="pills-health-tab"
+									tabindex="0">
+									<div class="student-testimonial">
+										<div class="testimonial-certificate">
+											<img src="./img/testimonial-img.jpg" alt="testimonial-certificate bg" class="testimonial-bg" />
+											<div class="content">
+												<div class="text-center">
+													<h2 class="school-name">B.M. JALAL UDDIN ADARSHO HIGH SCHOOL</h2>
+													<p class="school-address">Savar College Road, Savar, Dhaka</p>
+													<div class="ribbon">Testimonial</div>
+												</div>
+												<div class="mt-4">
+													<p>
+														This is to certify that Name: <span class="line"></span> Father's
+														Name: <span class="line"></span> Mother's Name:
+														<span class="line"></span>
+
+														She/He is a regular student from the school of Session:
+														<span class="line"></span> Class:
+														<span class="line"></span> Section:
+														<span class="line"></span>
+
+														Roll: <span class="line"></span> Student ID:
+														<span class="line"></span> and her/his birthday is
+														<span class="line"></span>.
+													</p>
+												</div>
+												<p>
+													As far as I know, She/He is of good character and is not involved in
+													any activities against this institution and the state.
+												</p>
+												<p>I wish him/her all the best.</p>
+												<div class="signature-section d-flex justify-content-between">
+													<div class="">
+														<p><span class="line"></span></p>
+														<p class="text-center">Date</p>
+													</div>
+													<div class="">
+														<p><span class="line"></span></p>
+														<p class="text-center">Signature of Principal</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Seat plane -->
+								<div class="tab-pane fade" id="pills-prev-school" role="tabpanel"
+									aria-labelledby="pills-prev-school-tab" tabindex="0">
+									<div class="d-flex mb-5 gap-4 cards-wrapper">
+										<!-- Seat plan 1 -->
+										<div>
+											<div class="card text-dark type-2">
+												<img src="./assets/images/cards/seat-plan-bg.png" alt="" class="bg-img" />
+												<div class="d-flex flex-column align-items-center px-3 pt-3">
+													<h5 class="mt-1 fw-medium mb-0" style="font-size: 12px">
+														B.M. JALAL UDDIN ADARSHO HIGH SCHOOL
+													</h5>
+													<p class="mb-1">Dhaka, Bangladesh</p>
+													<button class="btn btn-primary py-1 mb-1" style="font-size: 10px; border-radius: 40px">
+														Seat Plan
+													</button>
+													<p class="mb-1">Final Exam</p>
+													<div class="d-flex gap-2">
+														<div class="frame rounded-circle overflow-hidden mt-2" style="width: 50px; height: 50px">
+															<img src="./assets/images/cards/profile.jpg" alt="" class="img-fluid object-fit-cover"
+																style="scale: 2" />
+														</div>
+														<div class="">
+															<table class="">
+																<tbody>
+																	<tr>
+																		<td>Name</td>
+																		<td>: Md. Sajib Mia</td>
+																	</tr>
+																	<tr>
+																		<td>Class</td>
+																		<td>: 03</td>
+																	</tr>
+																	<tr>
+																		<td>Roll</td>
+																		<td>: 02</td>
+																	</tr>
+																	<tr>
+																		<td>Section</td>
+																		<td>: A</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<div class="card mt-4">
+			<div class="card-body">
+				<div class="text-center text-secondary small">
+					Copyright © MSA School 2024 .All Right Reserved
+				</div>
+			</div>
+		</div>
+		</main>
+	</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Tab nav custom controller -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const tabs = document.querySelectorAll('#pills-tab .nav-link');
+			const prevButton = document.getElementById('prev-tab');
+			const nextButton = document.getElementById('next-tab');
+			let currentIndex = Array.from(tabs).findIndex((tab) =>
+				tab.classList.contains('active')
+			);
+
+			function updateActiveTab(index) {
+				if (index >= 0 && index < tabs.length) {
+					// Show the new tab and update the active index
+					const tab = tabs[index];
+					const tabInstance = new bootstrap.Tab(tab);
+					tabInstance.show();
+					currentIndex = index;
+				}
+			}
+
+			prevButton.addEventListener('click', () => {
+				const prevIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+				updateActiveTab(prevIndex);
+			});
+
+			nextButton.addEventListener('click', () => {
+				const nextIndex = (currentIndex + 1) % tabs.length;
+				updateActiveTab(nextIndex);
+			});
+		});
+	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var calendarEl = document.getElementById('calendar');
+			var calendar = new FullCalendar.Calendar(calendarEl, {
+				headerToolbar: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'dayGridMonth,timeGridWeek,timeGridDay',
+				},
+			});
+			calendar.render();
+		});
+	</script>
+	<script>
+		const mobileScreen = window.matchMedia('(max-width: 990px)');
+		$(document).ready(function () {
+			$('.dashboard-nav-dropdown-toggle').click(function () {
+				$(this)
+					.closest('.dashboard-nav-dropdown')
+					.toggleClass('show')
+					.find('.dashboard-nav-dropdown')
+					.removeClass('show');
+				$(this).parent().siblings().removeClass('show');
+			});
+
+			$('.menu-toggle').click(function () {
+				if (mobileScreen.matches) {
+					$('.dashboard-nav').toggleClass('mobile-show');
+				} else {
+					$('.dashboard').toggleClass('dashboard-compact');
+				}
+			});
+		});
+	</script>
+	<script src="./assets/js/theme.js"></script>
+</body>
+
+</html>

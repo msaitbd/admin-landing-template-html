@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Dashboard</title>
+	<!-- FontAwesome CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="dashboard">
+		<div class="dashboard-nav">
+			<div class="nav-wrapper">
+				<header class="sticky-top">
+					<a href="#" class="brand-logo">
+						<img src="img/logo.png" alt="" />
+						<span>MSA School</span>
+					</a>
+					<a href="#" class="menu-toggle">
+						<i class="fas fa-close"></i>
+					</a>
+
+				</header>
+
+				<!-- side bar -->
+				<nav class="dashboard-nav-list">
+					<div class="w-100 px-2 mb-4">
+						<div class="input-group search-input rounded-0 shadow-sm">
+							<span class="input-group-text rounded-0"><i class="fas fa-search"></i></span>
+							<input type="text" class="form-control" placeholder="Search Menu" aria-label="Search Menu" />
+							<span class="input-group-text rounded-0"><i class="fa-solid fa-caret-right"></i></span>
+						</div>
+					</div>
+
+					<div class="px-2">
+						<p class="mb-1 mt-3 section-title">General</p>
+						<a href="#" class="dashboard-nav-item active">
+							<div class="d-flex align-items-center">
+								<img src="img/menu1.png" alt="" /> Dashboard
+							</div>
+						</a>
+
+						<p class="my-2 section-title">Admission</p>
+						<div class="dashboard-nav-dropdown active mb-2">
+							<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle text-light">
+								<img src="img/menu2.png" alt="" />Manage Admission
+								<i class="fa-solid fa-caret-right dropdown-icon"></i>
+							</a>
+							<div class="dashboard-nav-dropdown-menu">
+								<a href="admit.html" class="dropdpwn-subitem text-light"><i class="fa-solid fa-hand-point-right"></i>
+									Admit
+									Student</a>
+								<a href="all-cards.html" class="dropdpwn-subitem text-light"><i
+										class="fa-solid fa-hand-point-right"></i> All ID Card</a>
+							</div>
+						</div>
+						<p class="my-2 admission-title d-flex align-items-center justify-content-center gx-2">
+							<img src="img/admission.png" alt="" /> Admission
+						</p>
+						<div class="card border-0">
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu3.png" alt="" /> Online Admission
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"><i class="fa-solid fa-hand-point-right"></i> Admit
+										Student</a>
+									<a href="#" class="dropdpwn-subitem"><i class="fa-solid fa-hand-point-right"></i> Online
+										Application</a>
+								</div>
+							</div>
+						</div>
+
+						<p class="my-2 section-title">Student</p>
+						<div class="card border-0">
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/menu4.png" alt="" /> List of student
+								</div>
+							</a>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu5.png" alt="" />Manage Student
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="/admit.html" class="dropdpwn-subitem">
+										Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu6.png" alt="" />Reports
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem">Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+						</div>
+
+						<p class="my-2 section-title">Student Attendance</p>
+						<div class="card border-0">
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu7.png" alt="" /> Manage Attendance
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"> Admit Student</a>
+									<a href="#" class="dropdpwn-subitem"> Online Application</a>
+								</div>
+							</div>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu6.png" alt="" />Reports
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"> Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- fees -->
+						<p class="my-2 section-title">Fees</p>
+						<div class="card border-0">
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fees1.png" alt="" /> Fees Collection
+								</div>
+							</a>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/fees2.png" alt="" /> Fees Setup
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem"> Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fees3.png" alt="" /> Fine Setup
+								</div>
+							</a>
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fess4.png" alt="" /> Waiver Setup
+								</div>
+							</a>
+							<a href="#" class="dashboard-nav-item">
+								<div class="d-flex align-items-center">
+									<img src="img/fees5.png" alt="" /> Manage Free Gene
+								</div>
+							</a>
+							<div class="dashboard-nav-dropdown">
+								<a href="#" class="dashboard-nav-item align-items-center dashboard-nav-dropdown-toggle">
+									<img src="img/menu6.png" alt="" />Reports
+									<i class="fa-solid fa-caret-right dropdown-icon"></i>
+								</a>
+								<div class="dashboard-nav-dropdown-menu">
+									<a href="#" class="dropdpwn-subitem">Admit Student</a>
+									<a href="#" class="dropdpwn-subitem">Online Application</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="nav-item-divider"></div>
+						<a href="#" class="dashboard-nav-item">
+							<div class="d-flex align-items-center">
+								<i class="fas fa-sign-out-alt"></i> Logout
+							</div>
+						</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="dashboard-app">
+			<!-- Dashbora header section -->
+			<header class="dashboard-toolbar px-4">
+				<div class="d-flex gap-3">
+					<div class="menu-toggle d-block d-md-none">
+						<img src="img/bar.png" alt="" />
+					</div>
+					<div class="d-none d-lg-block">
+						<div class="input-group main-search">
+							<span class="input-group-text bg-transparent"
+								style="border-right: 0; border-color: #9ca3af; color: #9ca3af"><i class="fas fa-search"></i></span>
+							<input type="text" class="form-control bg-transparent" placeholder="Search here"
+								style="border-color: #9ca3af; border-left: 0; color: #fff" />
+						</div>
+					</div>
+				</div>
+
+				<div class="icon-bar">
+					<!-- search -->
+					<div class="dropdown main-nav-search">
+						<div class="dropdown-toggle icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+							class="icon"><i class="fas fa-search"></i>
+
+						</div>
+						<ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+							<li class="dropdown-item">
+								<div class="input-group main-search " style="width: 300px;">
+									<span class="input-group-text bg-transparent"><i class="fas fa-search"></i></span>
+									<input type="text" class="form-control bg-transparent" placeholder="Search here">
+								</div>
+
+							</li>
+						</ul>
+					</div>
+					<!-- nightmood -->
+					<div id="theme-toggler" class="icon">
+						<i class="fas fa-moon"></i>
+					</div>
+
+					<!-- email -->
+					<div class="dropdown email-dropdown">
+						<div class="dropdown-toggle icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="alert alert-primary mb-2" role="alert">
+										A simple primary alert—check it out!
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="alert alert-danger mb-2" role="alert">
+										A simple danger alert—check it out!
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="alert alert-warning m-0" role="alert">
+										A simple danger alert—check it out!
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- notification -->
+					<div class="dropdown">
+						<div class="dropdown-toggle icon position-relative" type="button" id="dropdownMenuButton1"
+							data-bs-toggle="dropdown">
+							<i class="fas fa-bell"></i>
+							<span style="
+										width: 8px;
+										height: 8px;
+										border-radius: 50%;
+										background: #ea3546;
+										position: absolute;
+										top: 6px;
+										right: 6px;
+									"></span>
+						</div>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+							<li class="pb-2 border-bottom">
+								<a class="dropdown-item" href="#">
+									<div class="d-flex gap-4 align-items-center">
+										<img src="img/profile.png" alt="" class="rounded-circle" />
+										<p>
+											<strong>John Doe</strong> reacted to your post10 mins
+											ago
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="pb-2 border-bottom">
+								<a class="dropdown-item" href="#">
+									<div class="d-flex gap-4 align-items-center">
+										<img src="img/profile.png" alt="" class="rounded-circle" />
+										<p>
+											<strong>John Doe</strong> reacted to your post10 mins
+											ago
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#">
+									<div class="d-flex gap-4 align-items-center">
+										<img src="img/profile.png" alt="" class="rounded-circle" />
+										<p>
+											<strong>John Doe</strong> reacted to your post10 mins
+											ago
+										</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!-- settings -->
+					<div class="dropdown">
+						<div class="dropdown-toggle icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+							<i class="fas fa-cog"></i>
+						</div>
+						<ul class="dropdown-menu border-0 shadow-lg" aria-labelledby="dropdownMenuButton1">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- profile -->
+					<div class="dropdown">
+						<div class="dropdown-toggle profile-icon" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+							<img src="img/profile.png" alt="Profile" />
+						</div>
+						<ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+							<li><a class="dropdown-item" href="#">My Profile</a></li>
+							<li><a class="dropdown-item" href="#">Login</a></li>
+							<li>
+								<a class="dropdown-item" href="#">Logout</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+
+			<div class="dashboard-content pt-2">
+				<!-- nav -->
+				<div class="container-fluid px-4">
+					<div class="top-nav-wrapper">
+						<style>
+							.top-nav-wrapper {
+								position: sticky;
+								top: 85px;
+								padding-top: 5px;
+								background: var(--body-bg);
+								z-index: 999;
+							}
+
+							.top-nav .nav-link {
+								white-space: nowrap;
+							}
+
+							/* .top-nav::-webkit-scrollbar {
+								height: 5px;
+								width: 100%;
+								background-color: #302b629a;
+								margin-top: 20px;
+								border-radius: 20px;
+							} */
+						</style>
+						<!-- for mobile -->
+						<ul class="nav top-nav home-content-nav mb-3 flex-nowrap overflow-auto d-lg-none d-md-block">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#">All</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#attendence">Attendence</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#salary">Salary </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#student-fee">Fee </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#income">Income </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#expense">Expense </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#routine">Class Routine </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#birthday">Birthday's </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#discipline">Dicipline </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#student-growth">Student's Growth
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#result-analysis">Results Analysis
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#calender">Calender </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#visitors">Visitor's </a>
+							</li>
+						</ul>
+						<!-- for desktop -->
+						<div class="slider-container d-none d-lg-block">
+							<ul class="nav top-nav home-content-nav mb-3 flex-nowrap overflow-hidden mx-5" id="navSlider">
+								<li class="nav-item">
+									<a class="nav-link active" aria-current="page" href="#">All</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#attendence">Attendence</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#salary">Salary</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#student-fee">Fee</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#income">Income</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#expense">Expense</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#routine">Class Routine</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#birthday">Birthday's</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#discipline">Discipline</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#student-growth">Student's Growth</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#result-analysis">Results Analysis</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#calender">Calendar</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#visitors">Visitor's</a>
+								</li>
+							</ul>
+							<!-- Next and Previous buttons -->
+							<button id="prev" class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+							<button id="next" class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+						</div>
+					</div>
+
+					<div class="dashboard-header text-center">
+						<div class="d-flex align-items-center justify-content-between">
+							<div class=" text-start">
+								<h2 class="fw-bold">Hello Johen, Welcome Back!</h2>
+								<p class="banner-title">
+									Education is the passport to the future; So learn more &
+									more
+								</p>
+							</div>
+							<div class="">
+								<img class="img-fluid" src="img/banner-img.png" alt="" />
+							</div>
+						</div>
+					</div>
+
+					<!-- Dashboard Content -->
+					<div class="student-card pt-4 row">
+						<!-- Card 1 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (93) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 2 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (94) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 3 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (94) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 4 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (94) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Card 5 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (93) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 6 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (94) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 7 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (94) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 8 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/svgexport-20 (94) 1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Present Students</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small d-flex align-items-center">
+											<p class="m-0">03</p>
+											<span> Students present on last day</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="finance-card row">
+						<!-- card 1 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-1">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-1.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-normal">Last Day: 0</p>
+											<p class="m-0 mb-2 fw-bold">
+												0% unchanged since last day
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- card 2 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-2">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-2.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-normal">Last Day: 1460</p>
+											<p class="m-0 mb-2 fw-bold text-danger">
+												94.94% since last month
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- card 3 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-3">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-3.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-normal">Total Collected: 528743</p>
+											<p class="m-0 mb-2 fw-bold text-danger">
+												Total Deducted: 80
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- card 4 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-4">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-4.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-normal">Last Day: 0</p>
+											<p class="m-0 mb-2 fw-bold">
+												0% unchanged since last day
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- card 5 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-5">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-5.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-bolder">SMS Provider: ElitBuzz</p>
+											<p class="mb-2"></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- card 6 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-6">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-6.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-normal">Last Day: 0</p>
+											<p class="m-0 mb-2 fw-bold">
+												0% unchanged since last day
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- card 7 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-7">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-7.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-normal">Last Day: 0</p>
+											<p class="m-0 mb-2 fw-bold">
+												0% unchanged since last day
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- card 8 -->
+						<div class="col-lg-3 col-md-6 mb-4">
+							<div class="card border-0 card-8">
+								<div class="card-body">
+									<div class="d-flex align-items-center">
+										<div>
+											<img src="img/finance-8.png" alt="" />
+										</div>
+										<div>
+											<h6 class="card-title m-0">Todays Received Fee</h6>
+											<p class="card-text m-0">10980</p>
+										</div>
+									</div>
+									<div class="nav-item-divider"></div>
+									<div>
+										<div class="card-text-small ps-3">
+											<p class="m-0 fw-normal">Last Day: 0</p>
+											<p class="m-0 mb-2 fw-bold">
+												0% unchanged since last day
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Dashboard charts -->
+					<div class="pie-chart-wrapper row mb-4">
+						<!-- student chart -->
+						<div class="col-xl-4 col-lg-6 col-md-4 mb-3">
+							<div class="card" style="border-radius: 8px">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold text-theme">
+										<p class="">Current Students</p>
+										<p class="">012</p>
+									</div>
+									<div class="row">
+										<div class="col-6">
+											<canvas id="std-pie-chart"></canvas>
+										</div>
+										<div class="col-6 pb-5">
+											<div class="d-flex gap-3 align-items-center mt-5">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #302b62;
+														"></div>
+												Male
+											</div>
+											<div class="d-flex gap-3 align-items-center">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #635f8d;
+														"></div>
+												Female
+											</div>
+											<div class="d-flex gap-3 align-items-center">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #d1d5db;
+														"></div>
+												Others
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- employe chart -->
+						<div class="col-xl-4 col-lg-6 col-md-4 mb-3">
+							<div class="card" style="border-radius: 8px">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold text-theme">
+										<p class="">Current Employees/Teacher</p>
+										<p class="">012</p>
+									</div>
+									<div class="row">
+										<div class="col-6">
+											<canvas id="employe-pie-chart"></canvas>
+										</div>
+										<div class="col-6 pb-5">
+											<div class="d-flex gap-3 align-items-center mt-5">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #ffc400;
+														"></div>
+												Teacher
+											</div>
+											<div class="d-flex gap-3 align-items-center">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #00838f;
+														"></div>
+												Employees
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- overview chart -->
+						<div class="col-xl-4 col-lg-6 col-md-4 mb-3">
+							<div class="card" style="border-radius: 8px">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold text-theme">
+										<p class="">User overview</p>
+										<p class="">012</p>
+									</div>
+									<div class="row">
+										<div class="col-6">
+											<canvas id="overview-pie-chart"></canvas>
+										</div>
+										<div class="col-6">
+											<div class="d-flex gap-3 align-items-center mt-4">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #ea3546;
+														"></div>
+												Student
+											</div>
+											<div class="d-flex gap-3 align-items-center">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #678fd5;
+														"></div>
+												Teacher
+											</div>
+											<div class="d-flex gap-3 align-items-center">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #dc166b;
+														"></div>
+												App Admin
+											</div>
+											<div class="d-flex gap-3 align-items-center">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: #8fc740;
+														"></div>
+												Employees
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- dashboard progress bar -->
+					<div class="progress-bar-wrapper row mb-4 text-theme">
+						<div class="col-xl-4 col-lg-6 col-md-4 mb-3">
+							<div class="card" style="border-radius: 8px">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold mb-2">
+										<p class="">Current students</p>
+										<p class="">012</p>
+									</div>
+									<div class="mb-3">
+										<span class="px-3 py-1 text-sm bg-light" style="background: #e5e7eb">12/12/24</span>
+									</div>
+									<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 100%; background: #198d38"></div>
+									</div>
+									<h6 class="mb-3 mt-2">Approved</h6>
+
+									<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 100%; background: #e5e7eb"></div>
+									</div>
+									<h6 class="mb-3 mt-2">Pending</h6>
+
+									<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar bg-danger" style="width: 100%; background: #d12525"></div>
+									</div>
+									<h6 class="mt-2">Decline</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-4 mb-3">
+							<div class="card" style="border-radius: 8px">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold mb-2">
+										<p class="">Students leave applications</p>
+										<p class="">012</p>
+									</div>
+									<div class="mb-3">
+										<span class="px-3 py-1 text-sm bg-light" style="background: #e5e7eb">12/12/24</span>
+									</div>
+
+									<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 100%; background: #198d38"></div>
+									</div>
+									<h6 class="mb-3 mt-2">Approved</h6>
+
+									<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 100%; background: #e5e7eb"></div>
+									</div>
+									<h6 class="mb-3 mt-2">Pending</h6>
+
+									<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar bg-danger" style="width: 100%; background: #d12525"></div>
+									</div>
+									<h6 class="mt-2">Decline</h6>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-lg-6 col-md-4 mb-3">
+							<div class="card" style="border-radius: 8px">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold mb-2">
+										<p class="">Employees leave applications</p>
+										<p class="">012</p>
+									</div>
+									<div class="mb-3">
+										<span class="px-3 py-1 text-sm bg-light" style="background: #e5e7eb">12/12/24</span>
+									</div>
+
+									<div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 100%; background: #198d38"></div>
+									</div>
+									<h6 class="mb-3 mt-2">Approved</h6>
+
+									<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar" style="width: 100%; background: #e5e7eb"></div>
+									</div>
+									<h6 class="mb-3 mt-2">Pending</h6>
+
+									<div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+										aria-valuemin="0" aria-valuemax="100">
+										<div class="progress-bar bg-danger" style="width: 100%; background: #d12525"></div>
+									</div>
+									<h6 class="mt-2">Decline</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- table progress -->
+					<div class="table-progress-wrapper row mb-4 text-theme">
+						<div class="col-xl-3 col-lg-6 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold mb-2">
+										<p class="">My Software learnings</p>
+										<p class="">13%</p>
+									</div>
+									<table class="table table-responsive">
+										<thead style="
+													background: linear-gradient(
+														to left,
+														#302b62,
+														#6258c8
+													);
+													color: white;
+												">
+											<tr>
+												<td scope="col">Module</td>
+												<td scope="col" align="right">Status</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Mark</td>
+												<td align="right">100%</td>
+											</tr>
+											<tr>
+												<td>Jacob</td>
+												<td align="right">0%</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-5 col-lg-6 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold mb-2">
+										<p class="">My Software learnings</p>
+										<div class="d-flex justify-content-center align-items-center gap-2">
+											<select class="form-control py-1">
+												<option value="">Rony</option>
+												<option value="">Miraz</option>
+												<option value="">Shapon</option>
+											</select>
+											<span class="">2%</span>
+										</div>
+									</div>
+									<table class="table table-borderless table-responsive">
+										<thead style="
+													background: linear-gradient(
+														to left,
+														#302b62,
+														#6258c8
+													);
+													color: white;
+												">
+											<tr>
+												<td scope="col">Module</td>
+												<td scope="col" align="right">Status</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>module</td>
+												<td align="right">status</td>
+											</tr>
+											<tr>
+												<td>module</td>
+												<td align="right">status</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-md-6 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex justify-content-between fw-bold mb-2">
+										<p class="">My Software learnings</p>
+										<p class="">13%</p>
+									</div>
+									<table class="table table-borderless table-responsive">
+										<thead style="
+													background: linear-gradient(
+														to left,
+														#302b62,
+														#6258c8
+													);
+													color: white;
+												">
+											<tr>
+												<td scope="col">Module</td>
+												<td scope="col" align="right">Status</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<img src="./assets/images/user-aaa.jpg" alt="user" class="img-fluid" style="width: 30px" />
+													Jacob
+												</td>
+												<td align="right">
+													<span class="px-4 py-2 bg-success text-white" style="border-radius: 4px">Complete</span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<img src="./assets/images/user-aaa.jpg" alt="user" class="img-fluid" style="width: 30px" />
+													Mark
+												</td>
+												<td align="right">
+													<span class="px-3 py-2 bg-success text-white" style="border-radius: 4px">30%</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- attendance bar chart -->
+					<style>
+						.section-header {
+							border-radius: 4px;
+						}
+					</style>
+					<div class="attendance-chart-wrapper mb-4" id="attendence">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Attendance</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="card mb-3">
+							<div class="card-body">
+								<p class="fw-bold">Date</p>
+								<div class="mb-3">
+									<span class="px-3 py-1 text-sm bg-light" style="background: #e5e7eb">12/12/24</span>
+								</div>
+
+								<p class="fw-bold text-center">
+									Class wise Student Attendance On 13/08/2024
+								</p>
+
+								<div class="w-100" style="overflow-x: auto">
+									<canvas id="attendance-bar-chart"></canvas>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<p class="fw-bold">Date</p>
+										<div class="mb-3">
+											<span class="px-3 py-1 text-sm bg-light" style="background: #e5e7eb">12/12/24</span>
+										</div>
+
+										<p class="fw-bold text-center">
+											Student Attendance On 13/08/2024
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="attendance-day-bar-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex flex-column flex-md-row gap-4 mb-3">
+											<div class="">
+												<p>Year</p>
+												<select class="form-control py-1">
+													<option>2024</option>
+													<option>2023</option>
+													<option>2022</option>
+												</select>
+											</div>
+											<div class="">
+												<p>Month</p>
+												<select class="form-control py-1">
+													<option>August</option>
+													<option>July</option>
+													<option>June</option>
+												</select>
+											</div>
+											<div class="">
+												<p>Attendance type</p>
+												<select class="form-control py-1">
+													<option>Present</option>
+													<option>Absent</option>
+												</select>
+											</div>
+										</div>
+
+										<p class="fw-bold text-center">
+											Student present percentage of August (2024)
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="attendance-percentage-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<p class="fw-bold">Date</p>
+										<div class="mb-3">
+											<span class="px-3 py-1 text-sm bg-light" style="background: #e5e7eb">12/12/24</span>
+										</div>
+
+										<p class="fw-bold text-center">
+											Student Attendance On 13/08/2024
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="attendance-day2-bar-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex justify-content-between fw-bold mb-2 px-4 py-5">
+											<h4 class="fw-bold text-theme">Employees on leave</h4>
+											<p class="text-danger">0</p>
+										</div>
+
+										<div class="progress mb-2" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+											aria-valuemin="0" aria-valuemax="100">
+											<div class="progress-bar" style="width: 100%; background: #e5e7eb"></div>
+										</div>
+										<div class="d-flex justify-content-between mb-2">
+											<h6 class="mb-3 mt-2">Teacher</h6>
+											0
+										</div>
+
+										<div class="progress mb-2" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+											aria-valuemin="0" aria-valuemax="100">
+											<div class="progress-bar" style="width: 100%; background: #e5e7eb"></div>
+										</div>
+										<div class="d-flex justify-content-between mb-2">
+											<h6 class="mb-3 mt-2">Employee</h6>
+											0
+										</div>
+
+										<div class="progress mb-2" role="progressbar" aria-label="Danger example" aria-valuenow="100"
+											aria-valuemin="0" aria-valuemax="100">
+											<div class="progress-bar" style="width: 100%; background: #e5e7eb"></div>
+										</div>
+										<div class="d-flex justify-content-between mb-2">
+											<h6 class="mb-3 mt-2">Others</h6>
+											0
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Fee overview chart -->
+					<div class="fee-chart-wrapper mb-4" id="student-fee">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Fee Overview</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col-md-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select class="form-control py-1">
+													<option>2024</option>
+													<option>2023</option>
+													<option>2022</option>
+												</select>
+											</div>
+											<div class="">
+												<p class="">Month</p>
+												<select class="form-control py-1">
+													<option>August</option>
+													<option>July</option>
+													<option>June</option>
+												</select>
+											</div>
+											<div class="ms-auto fw-bold h3">1970</div>
+										</div>
+
+										<p class="fw-bold text-center">
+											August (2024) fee collection
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="daily-fee-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select class="form-control py-1">
+													<option>2024</option>
+													<option>2023</option>
+													<option>2022</option>
+												</select>
+											</div>
+											<div class="ms-auto fw-bold h3">192270</div>
+										</div>
+
+										<p class="fw-bold text-center">
+											Monthly fee colleciton of 2024
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="monthly-fee-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col-lg-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex flex-column flex-md-row gap-4 mb-3">
+											<div class="">
+												<p class="">From</p>
+												<input type="date" class="form-control" />
+											</div>
+											<div class="">
+												<p class="">To</p>
+												<input type="date" class="form-control" />
+											</div>
+											<div class="ms-auto fw-bold h4">1970</div>
+										</div>
+
+										<p class="fw-bold text-center">
+											Sub category wise fee collection 1970 - 2024
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="sub-cat-fee-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Salary chart -->
+					<div class="mb-3" id="salary">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Salary</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col-lg-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select name="" id="" class="form-control">
+													<option value="">2024</option>
+													<option value="">2023</option>
+													<option value="">2022</option>
+													<option value="">2021</option>
+													<option value="">2020</option>
+												</select>
+											</div>
+											<div class="ms-auto fw-bold h4">223344</div>
+										</div>
+
+										<p class="fw-bold text-center">
+											Monthly Salary Payment For 2024
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="salary-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Income, Expense and assets chart -->
+					<div class="mb-3">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Income, Expense & Assets</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="row">
+							<!-- Income -->
+							<div class="col-xl-4 mb-3">
+								<div class="card overflow-hidden">
+									<div class="" style="
+												height: 10px;
+												background: linear-gradient(to right, #0088f5, #00bbfe);
+											"></div>
+									<div class="card-body">
+										<div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+											<p class="">This month income</p>
+											<h3 class="fw-bold">2404</h3>
+											<p class="text-secondary">Last month income: 16320</p>
+											<p class="text-danger">88.99% Since last month</p>
+
+											<div class="px-5 mx-3">
+												<div class="w-100" style="overflow-x: auto">
+													<canvas id="income-pie-chart"></canvas>
+												</div>
+											</div>
+
+											<div class="d-flex gap-3" style="margin-top: -30px">
+												<div class="d-flex gap-3 align-items-center mt-5">
+													<div style="
+																width: 12px;
+																height: 12px;
+																border-radius: 50%;
+																background-color: #302b62;
+															"></div>
+													<p class="text-secondary fs-6">
+														This month: <strong>2404</strong>
+													</p>
+												</div>
+												<div class="d-flex gap-3 align-items-center mt-5">
+													<div style="
+																width: 12px;
+																height: 12px;
+																border-radius: 50%;
+																background-color: #302b62;
+															"></div>
+													<p class="text-secondary fs-6">
+														Last month: <strong>2404</strong>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Income -->
+							<div class="col-xl-8 mb-3" id="income">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select name="" id="" class="form-control">
+													<option value="">2024</option>
+													<option value="">2023</option>
+													<option value="">2022</option>
+													<option value="">2021</option>
+													<option value="">2020</option>
+												</select>
+											</div>
+										</div>
+
+										<p class="fw-bold text-center">Month Wise Income</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="income-bar-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Expense -->
+							<div class="col-xl-4 mb-3" id="expense">
+								<div class="card">
+									<div class="" style="
+												height: 10px;
+												background: linear-gradient(to right, #900506, #fa6077);
+											"></div>
+									<div class="card-body">
+										<div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+											<p class="">This month expense</p>
+											<h3 class="fw-bold">2404</h3>
+											<p class="text-secondary">Last month: 16320</p>
+											<p class="text-danger">88.99% Since last month</p>
+
+											<div class="px-5 mx-3">
+												<div class="w-100" style="overflow-x: auto">
+													<canvas id="expense-pie-chart"></canvas>
+												</div>
+											</div>
+
+											<div class="d-flex gap-3" style="margin-top: -30px">
+												<div class="d-flex gap-3 align-items-center mt-5">
+													<div style="
+																width: 12px;
+																height: 12px;
+																border-radius: 50%;
+																background-color: #302b62;
+															"></div>
+													<p class="text-secondary fs-6">
+														This month: <strong>2404</strong>
+													</p>
+												</div>
+												<div class="d-flex gap-3 align-items-center mt-5">
+													<div style="
+																width: 12px;
+																height: 12px;
+																border-radius: 50%;
+																background-color: #302b62;
+															"></div>
+													<p class="text-secondary fs-6">
+														Last month: <strong>2404</strong>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Expense -->
+							<div class="col-xl-8 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select name="" id="" class="form-control">
+													<option value="">2024</option>
+													<option value="">2023</option>
+													<option value="">2022</option>
+													<option value="">2021</option>
+													<option value="">2020</option>
+												</select>
+											</div>
+										</div>
+
+										<p class="fw-bold text-center">Month Wise Expense</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="expense-bar-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Assets -->
+							<div class="col-xl-4 mb-3">
+								<div class="card">
+									<div class="" style="
+												height: 10px;
+												background: linear-gradient(to right, #2d8d5c, #21b0a6);
+											"></div>
+									<div class="card-body">
+										<div class="d-flex flex-column align-items-center gap-2 justify-content-center">
+											<p class="">This month assets</p>
+											<h3 class="fw-bold">-2404</h3>
+											<p class="text-secondary">Last month: -16320</p>
+											<p class="text-success">88.99% Since last month</p>
+
+											<div class="px-5 mx-3">
+												<div class="w-100" style="overflow-x: auto">
+													<canvas id="assets-pie-chart"></canvas>
+												</div>
+											</div>
+
+											<div class="d-flex gap-3" style="margin-top: -30px">
+												<div class="d-flex gap-3 align-items-center mt-5">
+													<div style="
+																width: 12px;
+																height: 12px;
+																border-radius: 50%;
+																background-color: #302b62;
+															"></div>
+													<p class="text-secondary fs-6">
+														This month: <strong>2404</strong>
+													</p>
+												</div>
+												<div class="d-flex gap-3 align-items-center mt-5">
+													<div style="
+																width: 12px;
+																height: 12px;
+																border-radius: 50%;
+																background-color: #302b62;
+															"></div>
+													<p class="text-secondary fs-6">
+														Last month: <strong>2404</strong>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Assets -->
+							<div class="col-xl-8 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select name="" id="" class="form-control">
+													<option value="">2024</option>
+													<option value="">2023</option>
+													<option value="">2022</option>
+													<option value="">2021</option>
+													<option value="">2020</option>
+												</select>
+											</div>
+										</div>
+
+										<p class="fw-bold text-center">Month Wise Assets</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="assets-bar-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Income vs Expense -->
+							<div class="col-xl-12 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select name="" id="" class="form-control">
+													<option value="">2024</option>
+													<option value="">2023</option>
+													<option value="">2022</option>
+													<option value="">2021</option>
+													<option value="">2020</option>
+												</select>
+											</div>
+										</div>
+
+										<p class="fw-bold text-center">Income Vs Expense</p>
+
+										<canvas height="100" id="inc_exp-bar-chart"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Class routine -->
+					<div class="mb-3" id="routine">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Class Routine</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<!-- Routine table -->
+						<div class="card">
+							<div class="" style="
+										height: 10px;
+										background: linear-gradient(to right, #0088f5, #00bbfe);
+									"></div>
+							<div class="card-body">
+								<div class="mb-4 d-flex flex-column flex-md-row gap-4">
+									<div class="">
+										<p class="">Session</p>
+										<select name="" id="" class="form-control">
+											<option value="">Jan 2023 - Dec 2023</option>
+										</select>
+									</div>
+
+									<div class="">
+										<p class="">Day</p>
+										<select name="" id="" class="form-control">
+											<option value="">Saturday</option>
+											<option value="">Sunday</option>
+											<option value="">Monday</option>
+										</select>
+									</div>
+
+									<div class="">
+										<p class="">Sort By</p>
+										<select name="" id="" class="form-control">
+											<option value="">Rome</option>
+										</select>
+									</div>
+								</div>
+								<style>
+									.table-container {
+										width: 100%;
+										overflow-x: auto;
+									}
+
+									.schedule-table {
+										border-collapse: collapse;
+										width: 100%;
+									}
+
+									.schedule-table th,
+									.schedule-table td {
+										border: 1px solid #dee2e6;
+										text-align: center;
+										padding: 10px;
+									}
+
+									.schedule-table th {
+										background-color: #f8f9fa;
+									}
+
+									.dark .schedule-table th {
+										background-color: #00000030;
+									}
+
+									.striped-td {
+										background-color: #f8f9fa;
+									}
+
+									.dark .striped-td {
+										background-color: #00000030;
+									}
+								</style>
+								<div class="table-container">
+									<table class="schedule-table table-responsive">
+										<thead>
+											<tr>
+												<th>Room</th>
+												<th>8:00 AM - 8:40 AM</th>
+												<th>8:40 AM - 9:20 AM</th>
+												<th>9:20 AM - 9:50 AM</th>
+												<th>9:50 AM - 10:20 AM</th>
+												<th>10:40 AM - 11:20 AM</th>
+												<th>11:20 AM - 12:00 PM</th>
+												<th>12:00 PM - 12:40 PM</th>
+												<th>12:40 PM - 1:10 PM</th>
+												<th>1:10 PM - 1:40 PM</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>Room-01</th>
+												<td class="striped-td">
+													One (Rose)<br />ইসলাম শিক্ষা<br />Atikur Rahman
+												</td>
+												<td>One (Rose)<br />বাংলা<br />Mst Halima khatun</td>
+												<td class="striped-td">
+													One (Rose)<br />গণিত<br />Mst Dil Rowson
+												</td>
+												<td>
+													One (Rose)<br />ইংরেজি<br />Mst Najifa Anjum Borna
+												</td>
+												<td class="striped-td">
+													Nine (Rose)<br />গণিত<br />Mst Tahera khatun
+												</td>
+												<td>Nine (Rose)<br />ইংরেজি<br />Eti Rani Saha</td>
+												<td class="striped-td">
+													Nine (Rose)<br />বাংলা<br />Nasrin Nahar Keya
+												</td>
+												<td>
+													One (Rose)<br />Spoken<br />Mst Najifa Anjum Borna
+												</td>
+												<td class="striped-td">
+													Nine (Rose)<br />ইসলাম শিক্ষা<br />Fatima Tuz Zohra
+												</td>
+											</tr>
+											<tr>
+												<th>Room-02</th>
+												<td>One (Lily)<br />বাংলা<br />Mst Halima khatun</td>
+												<td class="striped-td">
+													One (Lily)<br />ইসলাম শিক্ষা<br />Atikur Rahman
+												</td>
+												<td>
+													One (Lily)<br />ইংরেজি<br />Mst Najifa Anjum Borna
+												</td>
+												<td class="striped-td">
+													One (Lily)<br />গণিত<br />Mst Dil Rowson
+												</td>
+												<td>
+													Ten (Rose)<br />ইসলাম শিক্ষা<br />Fatima Tuz Zohra
+												</td>
+												<td class="striped-td">
+													Ten (Rose)<br />গণিত<br />Md Sariul Haque(Polas) tr
+												</td>
+												<td>Ten (Rose)<br />বাংলা<br />Nasrin Nahar Keya</td>
+												<td class="striped-td">
+													Ten (Rose)<br />Qurani Qayedah o Aqidah<br />Mst
+													Tahera khatun
+												</td>
+												<td>
+													Three (Rose)<br />ইংরেজি<br />Mst Najifa Anjum Borna
+												</td>
+											</tr>
+											<tr>
+												<th>Room-03</th>
+												<td class="striped-td">
+													Seven (Rose)<br />ইসলাম শিক্ষা<br />Fatima Tuz Zohra
+												</td>
+												<td>
+													Seven (Rose)<br />বাংলা<br />Nasrin Nahar Keya
+												</td>
+												<td class="striped-td">
+													Seven (Rose)<br />ইংরেজি<br />Eti Rani Saha
+												</td>
+												<td>Seven (Rose)<br />গণিত<br />Mst Halima</td>
+												<td class="striped-td">
+													Three (Rose)<br />ইসলাম শিক্ষা<br />Md Sariul
+													Haque(Polas) tr
+												</td>
+												<td>
+													Three (Rose)<br />ইংরেজি<br />Mst Najifa Anjum Borna
+												</td>
+												<td class="striped-td">
+													Three (Rose)<br />গণিত<br />Mst Halima
+												</td>
+												<td>Three (Rose)<br />Qurani Qayedah o Aqidah</td>
+												<td class="striped-td">
+													Three (Rose)<br />বাংলা<br />Mst Halima
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Birthday -->
+					<div class="mb-3" id="birthday">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Birthday</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex justify-content-between mb-4 align-items-center">
+											<h5 class="fw-medium text-theme">
+												Today's Students Birthday
+											</h5>
+											<button class="btn btn-light fw-bold">Send SMS</button>
+										</div>
+
+										<table class="table table-responsive">
+											<thead style="
+														background: linear-gradient(
+															to right,
+															#2194a3,
+															#8ddef7
+														);
+														color: white;
+													">
+												<tr>
+													<td align="center" scope="col">Image</td>
+													<td align="center" scope="col">Student</td>
+													<td align="center" scope="col">Class</td>
+													<td align="center" scope="col">Mobile</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr style="height: 200px"></tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex justify-content-between align-items-center mb-4">
+											<h5 class="fw-medium text-theme fw-bold">
+												Today's Employees Birthday
+											</h5>
+											<button class="btn btn-light">Send SMS</button>
+										</div>
+
+										<table class="table table-responsive">
+											<thead style="
+														background: linear-gradient(
+															to right,
+															#fb3c75,
+															#fec3cd
+														);
+														color: white;
+													">
+												<tr>
+													<td align="center" scope="col">Image</td>
+													<td align="center" scope="col">Employee</td>
+													<td align="center" scope="col">Department</td>
+													<td align="center" scope="col">Mobile</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr style="height: 200px"></tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Students discipline -->
+					<div class="mb-3" id="discipline">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Students Discipline</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col-lg-4 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex justify-content-between text-secondary">
+											<h5 class="">Discipline Cards</h5>
+											<h5>0</h5>
+										</div>
+										<div class="py-3">
+											<span class="px-5 py-1 bg-light" style="box-shadow: 0 0 5px #00000033">12/12/24</span>
+										</div>
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="discipline-chart"></canvas>
+										</div>
+
+										<div class="d-flex gap-3">
+											<div class="d-flex gap-3 align-items-center mt-5">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: teal;
+														"></div>
+												<p class="text-secondary fs-6">Approved 0</p>
+											</div>
+											<div class="d-flex gap-3 align-items-center mt-5">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: yellow;
+														"></div>
+												<p class="text-secondary fs-6">Pending 0</p>
+											</div>
+											<div class="d-flex gap-3 align-items-center mt-5">
+												<div style="
+															width: 12px;
+															height: 12px;
+															border-radius: 50%;
+															background-color: red;
+														"></div>
+												<p class="text-secondary fs-6">Canceled 0</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-8 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex justify-content-between align-items-center mb-4">
+											<h6 class="fw-medium">Student discipline latest log</h6>
+											<div class="btn-group" role="group">
+												<button type="button" class="btn btn-light">
+													ToDay
+												</button>
+												<button type="button" class="btn btn-light">
+													Week
+												</button>
+												<button type="button" class="btn btn-light">
+													Month
+												</button>
+											</div>
+										</div>
+
+										<div class="table-container">
+											<table class="table table-responsive">
+												<thead style="
+															background: linear-gradient(
+																to right,
+																#03c58c,
+																#95fa98
+															);
+															color: white;
+														">
+													<tr>
+														<td align="center" scope="col">Image</td>
+														<td align="center" scope="col">Student</td>
+														<td align="center" scope="col">Class</td>
+														<td align="center" scope="col">Status</td>
+														<td align="center" scope="col">Card</td>
+														<td align="center" scope="col">Reason</td>
+														<td align="center" scope="col">Date</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr style="height: 200px"></tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Student groth -->
+					<div class="mb-3" id="student-growth">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Students Growth</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex justify-content-between gap-4 mb-3">
+											<div class="">
+												<p class="">Year</p>
+												<select name="" id="" class="form-control">
+													<option value="">2024</option>
+													<option value="">2023</option>
+													<option value="">2022</option>
+													<option value="">2021</option>
+													<option value="">2020</option>
+												</select>
+											</div>
+											<div>
+												<p class="text-end">
+													Totoal newly admitted students of this year
+												</p>
+												<h3 class="text-end">25</h3>
+											</div>
+										</div>
+
+										<p class="fw-bold text-center">
+											Monthly new admitted student growth rate
+										</p>
+
+										<canvas id="std-groth-chart"></canvas>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<p class="fw-bold text-center">Session wise growth</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="std-ssn-groth-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Active vs inactive students -->
+						<div class="mb-3">
+							<div class="card">
+								<div class="card-body">
+									<p class="fw-bold text-center">
+										Class wise active vs inactive students for current session
+									</p>
+
+									<div class="w-100" style="overflow-x: auto">
+										<canvas id="act-vs-inact-chart"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Result analysis -->
+					<div class="mb-3" id="result-analysis">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Result Analysis</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<!-- Result analysis -->
+						<div class="mb-3">
+							<div class="card">
+								<div class="card-body">
+									<div class="d-flex flex-column flex-md-row gap-4 mb-3">
+										<div class="">
+											<p class="">Session</p>
+											<select name="" id="" class="form-control">
+												<option value="">2023 - 2024</option>
+											</select>
+										</div>
+										<div class="">
+											<p class="">Exam</p>
+											<select name="" id="" class="form-control">
+												<option value="">Final exam</option>
+											</select>
+										</div>
+										<div class="ms-auto">
+											<p class="text-end">Totoal student of final exam 4</p>
+											<p class="text-end">
+												Passed: <span class="text-success">2 (50%)</span>
+											</p>
+											<p class="text-end">
+												Failed: <span class="text-danger">2 (50%)</span>
+											</p>
+										</div>
+									</div>
+									<p class="fw-bold text-center">
+										Passed vs failed student of final exam
+									</p>
+
+									<div class="w-100" style="overflow-x: auto">
+										<canvas id="pass-vs-fail-chart"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Session</p>
+												<select name="" id="" class="form-control">
+													<option value="">2023 - 2024</option>
+												</select>
+											</div>
+											<div class="">
+												<p class="">Class</p>
+												<select name="" id="" class="form-control">
+													<option value="">Seven</option>
+												</select>
+											</div>
+										</div>
+										<p class="fw-bold text-center">Exam wise student grade</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="grade-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex gap-4 mb-3">
+											<div class="">
+												<p class="">Session</p>
+												<select name="" id="" class="form-control">
+													<option value="">2023 - 2024</option>
+												</select>
+											</div>
+											<div class="">
+												<p class="">Exam</p>
+												<select name="" id="" class="form-control">
+													<option value="">Final exam</option>
+												</select>
+											</div>
+										</div>
+										<p class="fw-bold text-center">
+											Top 5 student of class one(All Session)
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="top-std-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Calendar -->
+					<div class="mb-3" id="calender">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Calendar</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="card">
+							<div class="card-body">
+								<div id="calendar"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Visitors -->
+					<div class="mb-3" id="visitors">
+						<div class="d-flex align-items-center gap-3 py-2 px-4 mb-3 section-header">
+							<i class="fas fa-angles-right"></i>
+							<h5 class="mb-0 fw-bold">Visitors</h5>
+							<i class="fas fa-angles-right"></i>
+						</div>
+
+						<div class="row mb-3">
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="">
+											<span class="px-5 py-1 bg-light" style="box-shadow: 0 0 5px #00000033">12/12/24</span>
+										</div>
+										<div class="d-flex flex-column align-items-end text-secondary">
+											<h5 class="">Total</h5>
+											<h5>0</h5>
+										</div>
+										<p class="mb-3 text-center fw-bold text-secondary">
+											Visitors on 12/12/24
+										</p>
+
+										<div class="w-100" style="overflow-x: auto">
+											<canvas id="visitors-chart"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mb-3">
+								<div class="card">
+									<div class="card-body">
+										<div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-4">
+											<h6 class="fw-medium">Visitors latest log</h6>
+											<div class="btn-group" role="group">
+												<button type="button" class="btn btn-light">
+													ToDay
+												</button>
+												<button type="button" class="btn btn-light">
+													Week
+												</button>
+												<button type="button" class="btn btn-light">
+													Month
+												</button>
+											</div>
+										</div>
+
+										<div class="table-responsive">
+											<table class="table">
+												<thead style="
+															background: linear-gradient(
+																to right,
+																#03c58c,
+																#95fa98
+															);
+															color: white;
+														">
+													<tr>
+														<td align="center" scope="col">Photo</td>
+														<td align="center" scope="col">Name</td>
+														<td align="center" scope="col">Mobile</td>
+														<td align="center" scope="col">Type</td>
+														<td align="center" scope="col">Reason</td>
+														<td align="center" scope="col">Date</td>
+													</tr>
+												</thead>
+												<tbody>
+													<tr style="height: 200px"></tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Chart js cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var calendarEl = document.getElementById('calendar');
+			var calendar = new FullCalendar.Calendar(calendarEl, {
+				headerToolbar: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'dayGridMonth,timeGridWeek,timeGridDay',
+				},
+			});
+			calendar.render();
+		});
+	</script>
+	<script>
+		const mobileScreen = window.matchMedia('(max-width: 990px)');
+		$(document).ready(function () {
+			$('.dashboard-nav-dropdown-toggle').click(function () {
+				$(this)
+					.closest('.dashboard-nav-dropdown')
+					.toggleClass('show')
+					.find('.dashboard-nav-dropdown')
+					.removeClass('show');
+				$(this).parent().siblings().removeClass('show');
+			});
+
+			$('.menu-toggle').click(function () {
+				if (mobileScreen.matches) {
+					$('.dashboard-nav').toggleClass('mobile-show');
+				} else {
+					$('.dashboard').toggleClass('dashboard-compact');
+				}
+			});
+
+			$('.dashboard-nav').click(function (e) {
+				if (e.target.classList.contains('dashboard-nav')) {
+					if (mobileScreen.matches) {
+						$('.dashboard-nav').toggleClass('mobile-show');
+					} else {
+						$('.dashboard').toggleClass('dashboard-compact');
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		const slider = document.getElementById("navSlider");
+		const nextButton = document.getElementById("next");
+		const prevButton = document.getElementById("prev");
+
+		let scrollAmount = 0;
+		const scrollStep = 150; // Adjust this to control how much you slide
+
+		nextButton.addEventListener("click", () => {
+			slider.scrollBy({
+				left: scrollStep,
+				behavior: 'smooth'
+			});
+		});
+
+		prevButton.addEventListener("click", () => {
+			slider.scrollBy({
+				left: -scrollStep,
+				behavior: 'smooth'
+			});
+		});
+	</script>
+	<script src="./assets/js/app.js"></script>
+	<script src="./assets/js/theme.js"></script>
+</body>
+
+</html>
